@@ -1,0 +1,2 @@
+// Hello
+f = () => alert('Hi');
