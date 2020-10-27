@@ -9,7 +9,6 @@ const fs = require('fs');
 const del = require('del');
 
 // Plugins
-
 const fileinclude = require('gulp-file-include');
 const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -225,7 +224,7 @@ let rebuildAllTask = series(clearBuild,
     parallel(buildCss, buildJs, buildImg, buildFonts, buildHtml)
 );
 
-let watchTask = parallel(browserSyncStart, rebuildAllTask, watchAndBuild);
+let startDevServerTask = parallel(browserSyncStart, rebuildAllTask, watchAndBuild);
 
 exports.rebuild = rebuildAllTask;
-exports.default = watchTask;
+exports.default = startDevServerTask;
