@@ -1,12 +1,15 @@
+//@import "fonts.scss";
+
 body {
     background-color: black;
     color: burlywood;
-    font-size: 10px;
-    display: grid;
+    font-size: 15px;
+    //display: flex;
 }
 
 div {
     font-size: 30px;
+    background: url("../img/test.jpg") 0 0 no-repeat;
 
     @media (max-width: 767px) {
         font-size: 20px;
